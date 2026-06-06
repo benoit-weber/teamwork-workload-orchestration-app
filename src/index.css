@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-archivo: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-rounded: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-orange: #ff5a27;
+  --color-brand-brown: #4a2f27;
+  --color-brand-beige: #faf5eb;
+  --color-brand-black: #332d2f;
+  --color-brand-lavender: #d1ccdb;
+  --color-brand-lilac: #faf7ff;
+  --color-slate-border: #e5e1d8;
+}
+
+body {
+  @apply font-archivo bg-brand-beige text-slate-800;
+}
+
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

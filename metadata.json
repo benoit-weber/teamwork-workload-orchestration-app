@@ -1,0 +1,6 @@
+{
+  "name": "Workload Orchestration Dashboard",
+  "description": "A high-performance agency dashboard for Teamwork data extraction, capacity planning, and bulk task orchestration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
