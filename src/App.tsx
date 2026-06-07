@@ -586,7 +586,11 @@ export default function App() {
     const fetchInitialData = async () => {
       try {
         const res = await axios.get('/api/people');
-        const people: Teammate[] = res.data.people.map((p: any) => {
+        const peopleList = res.data?.people || [];
+        if (!Array.isArray(peopleList)) {
+          throw new Error("Invalid response format: 'people' is not an array");
+        }
+        const people: Teammate[] = peopleList.map((p: any) => {
           let department = 'Unassigned';
           if (p['department-name']) {
             department = p['department-name'];
